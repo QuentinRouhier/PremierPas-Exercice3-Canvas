@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Canvas ex3</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="400" height="400">
+    Texte alternatif pour les navigateurs ne supportant pas Canvas.
+  </canvas>
+  <script>
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  // carrosserie
+  ctx.fillStyle = "green"; // Définition de la couleur de remplissage
+  ctx.fillRect(100,50,200,75); //gauche haut droite bas
+  ctx.fillRect(50,100,300,75); //gauche haut droite bas
+  // roues
+  ctx.beginPath();
+  ctx.arc(90,215,40,0,Math.PI*2,true);
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "lightBlue";
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(310,215,40,0,Math.PI*2,true);
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "lightBlue";
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  </script>
+</body>
+</html>
